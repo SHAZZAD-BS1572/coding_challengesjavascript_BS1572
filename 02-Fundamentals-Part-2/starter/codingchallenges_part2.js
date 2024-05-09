@@ -1,4 +1,4 @@
-/*const calcAverage = (a, b, c) => (a + b + c) / 3;
+const calcAverage = (a, b, c) => (a + b + c) / 3;
 // console.log(calcAverage(3, 4, 5));
 
 let scoreDolphins = calcAverage(44, 23, 71);
@@ -59,34 +59,34 @@ const abdull = {
 
 console.log(
   `Abdull has ${abdull.friends.length} friends, and his best friend is called ${abdull.friends[0]}`
-);*/
+);
 
 // Challenge
 // Need to create a mathod to get summary information.
 
-// const abid = {
-//   firstName: "Abid",
-//   lastName: "khan",
-//   birthYear: 1998,
-//   job: "Student",
-//   friends: ["Michael", "Peter", "Steven"],
-//   hasDriversLicense: false,
+const abid = {
+  firstName: "Abid",
+  lastName: "khan",
+  birthYear: 1998,
+  job: "Student",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: false,
 
-//   calcAge: function () {
-//     this.age = 2007 - this.birthYear;
-//     return this.age;
-//   },
+  calcAge: function () {
+    this.age = 2007 - this.birthYear;
+    return this.age;
+  },
 
-//   getSummary: function () {
-//     return `${this.firstName} is a ${this.calcAge()}-year old ${
-//       abid.job
-//     }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
-//   },
-// };
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      abid.job
+    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+  },
+};
 
-// console.log(abid.getSummary());
+console.log(abid.getSummary());
 
-// Coding Challenge #3 calculate higher BMI
+//Coding Challenge #3 calculate higher BMI
 
 const muhammad = {
   name: "Muhammad",
@@ -124,3 +124,32 @@ if (muhammad.bmi > abdullah.bmi) {
     `${abdullah.name}'s BMI (${abdullah.bmi}) is higher than ${muhammad.fullName}'s BMI (${muhammad.bmi})`
   );
 }
+
+// Coding Challenge #4
+
+const totalTip = (bill) =>
+  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+const Bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < Bills.length; i++) {
+  const tip = totalTip(Bills[i]);
+  tips.push(tip);
+  totals.push(tip + Bills[i]);
+}
+
+console.log(Bills, tips, totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  return sum / arr.length;
+};
+
+console.log(calcAverage(Bills));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
