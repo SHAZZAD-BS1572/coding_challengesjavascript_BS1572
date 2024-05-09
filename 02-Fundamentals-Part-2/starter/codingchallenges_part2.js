@@ -32,7 +32,7 @@ const age = [
   calcAge(years[1]),
   calcAge(years[years.length - 1]),
 ];
-console.log(age);*/
+console.log(age);
 
 //Part 2 // Coding Challenge #2 tip calculator
 
@@ -43,3 +43,84 @@ const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])];
 const totals = [bill[0] + tips[0], bill[1] + tips[1], bill[2] + tips[2]];
 
 console.log(`Bills ${bill}, Tips ${tips}, Totals ${totals}`);
+
+//
+
+const abdull = {
+  firstName: "Abdull",
+  lastName: "Abid",
+  age: 2037 - 1998,
+  job: "Software engineer",
+  friends: ["jilani", "sakib", "sakil"],
+};
+
+// Challenge
+// "Abdull has 3 friends, and his best friend is called jilani"
+
+console.log(
+  `Abdull has ${abdull.friends.length} friends, and his best friend is called ${abdull.friends[0]}`
+);*/
+
+// Challenge
+// Need to create a mathod to get summary information.
+
+// const abid = {
+//   firstName: "Abid",
+//   lastName: "khan",
+//   birthYear: 1998,
+//   job: "Student",
+//   friends: ["Michael", "Peter", "Steven"],
+//   hasDriversLicense: false,
+
+//   calcAge: function () {
+//     this.age = 2007 - this.birthYear;
+//     return this.age;
+//   },
+
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${
+//       abid.job
+//     }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+//   },
+// };
+
+// console.log(abid.getSummary());
+
+// Coding Challenge #3 calculate higher BMI
+
+const muhammad = {
+  name: "Muhammad",
+  mass: "78",
+  height: "1.69",
+  calcBmi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+console.log(muhammad.calcBmi());
+
+const abdullah = {
+  name: "Abdullah",
+  mass: "92",
+  height: "1.95",
+  calcBmi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+muhammad.calcBmi();
+abdullah.calcBmi();
+
+console.log(muhammad.bmi, abdullah.bmi);
+
+if (muhammad.bmi > abdullah.bmi) {
+  console.log(
+    `${muhammad.name}'s BMI (${muhammad.bmi}) is higher than ${abdullah.name}'s BMI (${abdullah.bmi})`
+  );
+} else if (abdullah.bmi > muhammad.bmi) {
+  console.log(
+    `${abdullah.name}'s BMI (${abdullah.bmi}) is higher than ${muhammad.fullName}'s BMI (${muhammad.bmi})`
+  );
+}
